@@ -56,11 +56,11 @@ class WXYFluxDispatcher: NSObject {
             aIdentifier = ai
         }
         
-        if sIdentifier.characters.count > 0 && aIdentifier.characters.count > 0 {
+        if !sIdentifier.isEmpty && !aIdentifier.isEmpty {
             return sIdentifier == aIdentifier
-        } else if sIdentifier.characters.count > 0 {
+        } else if !sIdentifier.isEmpty {
             return true
-        } else if aIdentifier.characters.count > 0 {
+        } else if !aIdentifier.isEmpty {
             return false
         } else {
             return true
